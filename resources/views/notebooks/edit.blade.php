@@ -1,7 +1,6 @@
 @extends('layouts.layout')
-
 @section('content')
-
+<link rel="stylesheet" href="materialize/css/materialize.css" media="screen" title="no title">
 
 <div class="container">
 
