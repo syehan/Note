@@ -4,10 +4,32 @@
 <link rel="stylesheet" href="materialize/css/materialize.css" media="screen" title="no title">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="materialize/css/materialize.min.css" media="screen" title="no title">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 html {
   font-family: GillSans, Calibri, Trebuchet, sans-serif;
 
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa-facebook{
+  color: white;
+}
+.fa-twitter{
+  color:  #55ACEE;
+}
+.fa-weibo{
+  color: #fb8c00;
+}
+.fa-instagram{
+  color: #7e57c2;
 }
 </style>
 <head>
@@ -25,9 +47,7 @@ html {
 
   <body>
     <div class="navbar-fixed">
-
-
-      <nav class="teal lighten-3">
+      <nav class="teal lighten-3 navbar-fixed">
     <div class="nav-wrapper">
       <a id="logo-container" href="{{route("index")}}" class="brand-logo center">
        <img src="image/notebook.png" alt="" />

@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="materialize/css/materialize.css" media="screen" title="no title">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="materialize/css/materialize.min.css" media="screen" title="no title">
+<style>
+html {
+  font-family: GillSans, Calibri, Trebuchet, sans-serif;
+
+}
+</style>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +17,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'NoteWeb') }}</title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -21,60 +29,43 @@
     </script>
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
 
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+          <div class="nav-wrapper">
 
-                <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
+                {{-- <a class="brand-logo" href="{{ url('/') }}">
+                    {{ config('app.name', 'NoteWeb') }}
+                </a> --}}
+                <div class="container">
             </div>
-
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    &nbsp;
-                </ul>
 
                 <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
-                    @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
-                        <li><a href="{{ url('/about') }}">About</a></li>
-                        <li><a href="{{ url('/contact') }}">Contact</a></li>
-                    @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                  @if (Auth::guest())
+       <li><a href="{{url('/register')}}"></a></li>
+       <li><a href="{{ url('/login') }}"></a></li>
+     @else
+       <li>
+           <a href="#" class="dropdown-button" data-toggle="dropdown1">
+               {{ Auth::user()->name }} <span class="caret"></span>
+           </a>
 
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="{{ url('/logout') }}"
-                                        onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                        Logout
-                                    </a>
+           <ul class="dropdown-content" id="dropdown1" role="menu">
+               <li>
+                   <a href="{{ url('/logout') }}"
+                       onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                       Logout
+                   </a>
 
-                                    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                                    </form>
-                                </li>
-                            </ul>
-                        </li>
-                    @endif
-                </ul>
+                   <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                       {{ csrf_field() }}
+                   </form>
+               </li>
+           </ul>
+       </li>
+   @endif
+
             </div>
         </div>
     </nav>
@@ -83,5 +74,15 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    <script src="{{'dist/js/jquery3.min.js'}}"></script>
+    <script src="{{'dist/js/bootstrap.js'}}"></script>
+    <script src="{{'js/vendor/foundation.js'}}"></script>
+    <script src="{{'js/vendor/foundation.min.js'}}"></script>
+    <script src="{{'js/vendor/jquery.js'}}"></script>
+    <script src="{{'js/vendor/what-input.js'}}"></script>
+    <script src="{{'js/apps.js'}}"></script>
+    <script src="{{'materialize/js/materialize.js'}}"></script>
+    <script src="{{'materialize/js/materialize.min.js'}}"></script>
+    <script src="{{'js/init.js'}}"></script>
 </body>
 </html>

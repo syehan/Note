@@ -11,7 +11,7 @@
 |
 */
 
-Route::group(['middleware'=>'auth'],function(){
+// Route::group(['middleware'=>'auth'],function(){
 
         Route::resource('/', 'Controller@index');
         Route::resource('/notebooks', 'NotebooksCtrl');
@@ -22,7 +22,7 @@ Route::group(['middleware'=>'auth'],function(){
 
 
 
-});
+// });
 
 
 Auth::routes();

@@ -41,24 +41,23 @@
            <div class="container">
              <div class="row">
                <div class="col l6 s12">
-                 <h5 class="white-text">Footer Content</h5>
-                 <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                 <h5 class="white-text">Address</h5>
+                 <p class="grey-text text-lighten-4">Cempaka Molek Street 67th Avenue, Bekasi City Indonesia</p>
                </div>
                <div class="col l4 offset-l2 s12">
-                 <h5 class="white-text">Links</h5>
+                 <h5 class="white-text">Social media</h5>
                  <ul>
-                   <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                   <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                   <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                   <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                        <a class="fa fa-facebook" href="facebook.com"></a>
+                        <a class="fa fa-instagram" href="instagram.com"></a>
+                        <a class="fa fa-twitter" href="twitter.com"></a>
+                        <a class="fa fa-weibo" href="weibo.com"></a>
                  </ul>
                </div>
              </div>
            </div>
            <div class="footer-copyright">
-             <div class="container">
+             <div class="container center">
              © 2016 Hansol. All right reserved
-             <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
              </div>
            </div>
          </footer>

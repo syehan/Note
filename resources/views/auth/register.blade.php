@@ -2,10 +2,69 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+              <h2 class="center-align"><img src="image/notebook3.png" /></h2>
+              <div class="row">
+                <div class="col s12 m2 12"></div>
+                  <form class="col s12 m8 18" role="form" method="POST" action="{{ url('/register') }}">
+                    {{ csrf_field() }}
+                    <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="text" class="validate">
+                            <label for="email">Name</label>
+                        </div>
+                    </div>
+                  </div>
+                      <div class="row">
+                          <div class="input-field col s12">
+                              <input id="email" type="email" class="validate">
+                              <label for="email">Email</label>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="input-field col s12">
+                              <input id="pass" type="password" class="validate">
+                              <label for="pass">Password</label>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="input-field col s12">
+                              <input id="pass" type="password" class="validate">
+                              <label for="pass">Confirm Password</label>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col m12">
+                                Already Have? <a class="left-align" href="{{url('/register')}}">Sign In</a>
+                                  <button class="right-align btn btn-large waves-effect waves-light" type="button" name="action">Sign Up</button>
+                          </div>
+                      </div>
+                  </form
+                  <div class="col s12 m2 12"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {{-- <div class="row">
+        <div class="col-sm-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
+                <div class="panel-heading center"><h5>Register</h5></div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
@@ -78,5 +137,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 @endsection
